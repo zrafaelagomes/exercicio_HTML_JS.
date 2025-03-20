@@ -1,0 +1,65 @@
+body {
+    margin: 20px;
+}
+
+.error-message {
+    color: white; 
+    background-color: red; 
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; 
+    display: none; /* Inicialmente escondido */
+    margin-top: 10px; /* Espaçamento acima da mensagem */
+}
+
+.success-message {
+    color: green;
+    display: none; /* Inicialmente escondido */
+}
+
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+}
+
+form {
+    margin-top: 20px; /* Espaçamento acima do formulário */
+}
+
+label {
+    display: block; /* Faz o label ocupar toda a largura */
+    margin: 10px 0 5px; /* Espaçamento em torno do label */
+}
+
+/* Remove as setas dos campos de entrada numéricos */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+input[type="number"] {
+    width: 100%; /* Largura total do campo de entrada */
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento abaixo do campo de entrada */
+}
+
+button {
+    background-color: #2ecc71; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    width: 100%; /* Largura total do botão */
+    max-width: 200px; /* Largura máxima do botão */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    display: block; /* Faz o botão ser um bloco para que o margin funcione */
+}
+
+button:hover {
+    background-color: #27ae60; /* Cor do botão ao passar o mouse */
+}
