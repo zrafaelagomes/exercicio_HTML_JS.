@@ -1,16 +1,21 @@
-const form = document.getElementById("form");
-const campoA = document.getElementById("campoA");
-const campoB = document.getElementById("campoB");
-const mensagem = document.getElementById("mensagem");
+const formulario = document.getElementById('formulario');
+const successMessage = document.getElementById('success-message');
+const errorMessage = document.getElementById('error-message');
 
-form.addEventListener("submit", function(event) {
-    if (parseInt(campoB.value) > parseInt(campoA.value)) {
-        mensagem.innerHTML = "Formulário válido!";
-        mensagem.style.color = "green";
+formulario.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
+
+    const campoA = parseFloat(document.getElementById('campo-a').value);
+    const campoB = parseFloat(document.getElementById('campo-b').value);
+
+    // Limpa mensagens anteriores
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+
+    // Validação
+    if (campoB > campoA) {
+        successMessage.style.display = 'block'; // Exibe mensagem de sucesso
     } else {
-        mensagem.innerHTML = "Formulário inválido. O número B deve ser maior que o número A.";
-        mensagem.style.color = "red";
-        event.preventDefault();
+        errorMessage.style.display = 'block'; // Exibe mensagem de erro
     }
-    event.preventDefault();
 });
